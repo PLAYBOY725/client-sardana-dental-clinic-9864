@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sardana Dental Clinic | Premier Implant Centre in Mohali</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: { 50: '#f0fdfa', 500: '#0d9488', 600: '#0f766e', 900: '#115e59' },
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-bg { background: linear-gradient(135deg, #0f766e 0%, #115e59 100%); }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+    <!-- Top Bar -->
+    <div class="bg-teal-900 text-white text-xs py-2 px-4 text-center">
+        <span class="font-medium">Rated 4.9★ on Google Maps • 120+ Verified Patient Reviews</span>
+        <span class="mx-2 opacity-50">|</span>
+        <a href="tel:+919872510600" class="underline hover:text-teal-200">Call Now: +91 98725 10600</a>
+    </div>
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur shadow-sm border-b border-gray-100">
+        <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="text-2xl font-heading font-bold text-teal-700">SARDANA<span class="text-teal-900">DENTAL</span></div>
+            <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-gray-600">
+                <a href="#services" class="hover:text-teal-600">Services</a>
+                <a href="#why-us" class="hover:text-teal-600">Why Us</a>
+                <a href="#booking" class="hover:text-teal-600">Book Appointment</a>
+            </div>
+            <a href="#booking" class="bg-teal-600 text-white px-6 py-2.5 rounded-full font-bold text-sm hover:bg-teal-700 transition">Book Consultation</a>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="py-20 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <span class="inline-block bg-teal-100 text-teal-800 text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">Mohali's Most Trusted Dental Care</span>
+                <h1 class="text-5xl md:text-6xl font-heading font-extrabold text-gray-900 mb-6 leading-tight">Your Smile Deserves <span class="text-teal-600">Expert Care.</span></h1>
+                <p class="text-lg text-gray-600 mb-8 leading-relaxed">Experience world-class dental implants and multispeciality care at Sardana Dental Clinic. Combining precision technology with a compassionate touch in the heart of Mohali.</p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#booking" class="bg-teal-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-teal-700 shadow-lg shadow-teal-200 text-center">Schedule Your Visit</a>
+                    <a href="https://wa.me/919872510600?text=Hello%20Sardana%20Dental%20Clinic,%20I%20want%20to%20inquire%20about%20your%20services." class="border border-gray-300 px-8 py-4 rounded-xl font-bold hover:bg-gray-50 text-center">Chat via WhatsApp</a>
+                </div>
+            </div>
+            <div class="relative rounded-3xl p-8 bg-teal-900 text-white overflow-hidden shadow-2xl">
+                <div class="relative z-10">
+                    <div class="text-5xl font-bold mb-2">4.9★</div>
+                    <div class="text-teal-200 mb-6 font-medium uppercase text-sm tracking-widest">120+ Verified Google Reviews</div>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3 bg-white/10 p-4 rounded-xl">
+                            <span class="text-2xl">🦷</span>
+                            <div>Advanced Dental Implants</div>
+                        </div>
+                        <div class="flex items-center gap-3 bg-white/10 p-4 rounded-xl">
+                            <span class="text-2xl">✨</span>
+                            <div>Painless Laser Dentistry</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-heading font-bold text-center mb-16">Our Clinical Services</h2>
+            <div class="grid md:grid-cols-4 gap-6">
+                {[ {title: "Signature Consultation", desc: "Expert assessment & treatment planning."}, {title: "Turnaround Package", desc: "Rapid aesthetic transformation."}, {title: "Enterprise Care", desc: "Full mouth rehabilitation & implants."}, {title: "VIP 24/7 Support", desc: "Dedicated priority care for patients."} ].map(service => (
+                    <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition">
+                        <h3 class="font-bold text-xl mb-3">{service.title}</h3>
+                        <p class="text-gray-600 text-sm">{service.desc}</p>
+                    </div>
+                ))}
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Form -->
+    <section id="booking" class="py-20 px-6">
+        <div class="max-w-3xl mx-auto bg-white p-10 rounded-3xl shadow-xl border border-gray-100">
+            <h2 class="text-3xl font-heading font-bold mb-8 text-center">Request Your Appointment</h2>
+            <div id="successBanner" class="hidden bg-green-50 text-green-800 p-4 rounded-xl mb-6 text-center border border-green-200 font-medium">
+                Thank you! Our clinical team will contact you shortly to confirm your slot.
+            </div>
+            <form id="bookingForm" class="space-y-4">
+                <input type="text" placeholder="Full Name" required class="w-full p-4 bg-gray-50 rounded-xl outline-none focus:ring-2 focus:ring-teal-500">
+                <input type="tel" placeholder="Phone Number" required class="w-full p-4 bg-gray-50 rounded-xl outline-none focus:ring-2 focus:ring-teal-500">
+                <select class="w-full p-4 bg-gray-50 rounded-xl outline-none focus:ring-2 focus:ring-teal-500">
+                    <option>Select Service</option>
+                    <option>General Consultation</option>
+                    <option>Dental Implants</option>
+                    <option>Emergency Care</option>
+                </select>
+                <button type="submit" class="w-full bg-teal-900 text-white py-4 rounded-xl font-bold hover:bg-black transition">Confirm Booking Request</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-3xl mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-10 text-center">Frequently Asked Questions</h2>
+            <div class="space-y-4">
+                <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+                    <button class="faq-btn w-full text-left p-6 font-bold flex justify-between items-center">Is the initial consultation paid? <span>+</span></button>
+                    <div class="faq-content hidden px-6 pb-6 text-gray-600">We offer comprehensive primary assessments. Contact our front desk for current promotional offers.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-16 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-12">
+            <div>
+                <h4 class="text-white font-bold mb-4">Sardana Dental Clinic</h4>
+                <p>SCF 14, Phase 7, Mohali, Punjab 160059</p>
+                <p class="mt-2">Email: contact@sardanadentalclinic.com</p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4">Quick Links</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:text-white">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4">Hours</h4>
+                <p>Mon-Sun: 9:00 AM - 8:00 PM</p>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-gray-800 text-sm text-center">
+            &copy; 2024 Sardana Dental Clinic. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        // Form Handling
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            document.getElementById('successBanner').classList.remove('hidden');
+            this.reset();
+        });
+
+        // FAQ Toggle
+        document.querySelectorAll('.faq-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                content.classList.toggle('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
